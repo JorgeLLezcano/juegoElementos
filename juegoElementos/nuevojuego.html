@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+      <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>ELEMENTOS GAMES</title> 
+          
+          
+          <link rel="stylesheet" href="style.css">
+
+      </head>
+  <body>
+  
+        <section id="seleccion-avatar">
+            <h1 class="titulo">ELEMENTALES 🔥 💧 🌵</h1>
+            <h2 class="subtitulo">Elige tu avatar:</h2>
+
+            <div id ="contenedorTarjetas" class="tarjetas"><span class="card-title"></span>
+            </div>
+            
+            <button id="boton-avatar">seleccionar</button>
+        </section>
+        
+        <section id="ver-mapa">
+            <h2 class="subtitulo">Recorre el mapa!🔥 💧 🌵</h2>
+            <canvas id="mapa"></canvas>
+             <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">arriba</button>
+            <div> 
+             <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+             <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">abajo</button>
+             <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">derecha</button>
+            </div>
+        </section>
+    
+          <section id="elige-ataque">
+        <h1 class="titulo">ELEMENTOS 🔥 💧 🌵</h1>
+        <h2 class="subtitulo">Elige  ataque!:</h2>
+        
+
+    <div id="contenedorAtaques" class="tarjetas-ataque">
+    </div>
+ 
+        
+        <div id="mensaje">
+            <p id = "resultados">A JUGAR!!!</p>
+
+            <section id="reiniciar">
+                <button id="boton-reiniciar"> reiniciar </button>  
+            </section> 
+            </div>
+                
+                
+            
+            <div class="ataques">
+                <div class ="ataques-avatar">
+                    <p id="vidas-avatar">0</p>
+                    <p id="avatar-element"></p>
+                    <div id = "mensajeAtaqueAvatar"></div>
+            </div>
+            <div class ="ataques-rival">
+                    <p id="vidas-rival">0</p>
+                    <p id="rival"></p>
+                    <div id = "mensajeAtaqueRival"></div>
+                </div>
+            </div>
+            
+        
+          </section>
+          <script src="codigonuevojuego.js"></script>
+    </body>
+</html>

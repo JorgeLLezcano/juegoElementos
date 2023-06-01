@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+body{
+    font-family: 'Cinzel', serif;
+    background-image: url(./assets/estrellas.jpg);
+    height: 500px;
+   
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    animation: changeBg 5s infinite
+    alternate linear;
+}
+/* @keyframes changeBg{
+0%
+{background: #ee6055;}
+
+25%
+{background:#60d394;}
+50%
+{background: #aaf683;}
+75%
+{background: #ffd97d;}
+100%
+{background: #ff9b85;
+} */
+
+.titulo{
+    
+    color: rgb(2, 11, 14);
+    width: 426px;
+    height: 50px;
+    background-image:url(./assets/papiro.jfif);
+    border: solid;
+    font-size: 32px;
+    /* text-shadow: 10px 10px 5px grey; */
+     transition: all  2s;
+     
+}
+.titulo:hover{
+    transform: scale(1.15);
+}
+.subtitulo{
+    color:#f6f8f5;
+    text-shadow: 0px 0px 30px blue;
+
+}
+#seleccion-avatar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid white;
+    border-radius: 20px;
+
+}
+.tarjetas, .tarjetas-ataque {
+   display:flex ;
+   gap: 10px;
+}
+
+
+
+.tarjeta-avatar{
+    /* width: 147px;
+    height: 201px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 6px;
+    box-sizing: border-box;
+    margin: -1rem;
+    border-top: 1px solid;
+    border-left: 1px grey;
+    border-radius: 10px;
+    display:flex;
+    color: black;
+    align-items: center;
+    align-content: flex-start;
+    flex-direction: column;
+    box-shadow: 10px 10px 5px #0e0d0d;
+    transition: all  2s;
+    transform: rotate(-15deg); 
+    outline:1px solid;
+    outline-offset:-8px;
+    overflow:hidden;
+    position: relative;
+    animation:  cambiar 10s ease infinite; */
+    padding: 6px;
+      margin: -1rem;
+      right: 0;
+      width:150px;
+      height: 200px;
+      background-color:#333;
+      border-radius:10px;
+      outline:1px solid rgba(255, 255, 255, .5);
+      outline-offset:-8px;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
+      position: relative;
+      overflow: hidden;
+      transition: all  2s;
+      transform: rotate(-15deg);
+      animation:  cambiar 10s ease 
+    
+}
+
+.tarjeta-avatar::before {
+    content: "";
+    position: absolute;
+    top:0;
+    width: 90%;
+    height: 100%;
+    filter: blur(5px);
+    background: rgba(255, 255, 255, 0.8);
+    transform: skewX(45deg) translateX(351px);
+    transition: 0.3s;
+}
+    
+.tarjeta-avatar:hover{
+    transform: translateY(-20px);
+    /* rotateX(20deg) rotateY(30deg); */
+    /* transform: scale(1.0); */
+    transform: scale(1.15);
+    /* background: linear-gradient(45deg, #f7f7f7, #2908db00);
+    animation:  cambiar 10s ease infinite;
+    background-size: 400% 400%;
+    position: relative; */
+    z-index: 1;
+    box-shadow:-10px 10px 30px white,
+                 10px 10px 30px white;
+    
+      
+}
+/* transform: translateZ(10px)
+ rotateX(20deg) rotateY(30deg)translateY(-20px) */
+
+.tarjeta-avatar:hover::before{
+    transform: skewX(45deg) translateX(-150px);
+    
+
+}
+@keyframes cambiar{
+    0% {background-position: 0 50%; }
+    50%{background-position: 100% 50%; }
+    100%{background-position: 050%;
+ } 
+ 
+  }
+
+input{
+    display: none;
+}
+
+input:checked + label {
+    background-color: red; 
+    transform: scale(1.15);
+    z-index: 1;
+    /* animation: move .2s forwards; */
+    
+     /* position: absolute;
+     top: 90px; */
+     /* left: 80px; top: 90px; */ 
+}
+
+
+#boton-avatar{
+    width: 180px;
+    height: 41px;
+    border-radius: 20px;
+    background-image: url(./assets/papiro.jfif);
+    border: 2px solid;
+    font-family: 'Cinzel', serif;
+    margin: 30px;
+    box-shadow: 7px 9px 15px black inset;
+    transition: all  2s;
+    animation: float 5s ease-in-out infinite;
+   
+}
+
+
+ .tarjeta-avatar img{
+    position: absolute;
+    top:0;
+    left:0 ;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .6;
+    border-radius: 20px;
+    /* width: 127px;
+    border-radius: 20px;
+    border: transparent;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply; */
+      
+}
+.card-title{
+    
+      position: absolute;
+      left: 10px;
+      bottom: -11px;
+      font-size: 19px;
+      text-shadow: 0 0 1px rgba(0, 0, 0, .5);
+      color: aliceblue;
+      }
+
+.tarjeta-avatar -bg{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+} 
+
+#elige-ataque{
+    flex-direction: column;
+    align-items: center
+}
+
+
+.boton-ataque{
+    width: 84px;
+    height: 142px;    
+    background-color: #5BB318;
+    background: radial-gradient(at top left, #0F0 20%, #040);
+    padding: 6px;
+    box-sizing: border-box;
+    margin: 22px;
+    border: solid;
+    border-radius: 10px;
+    color: white;
+    overflow:hidden;
+    transition: all  2s;
+    animation: float 5s ease-in-out infinite;
+}
+#boton-fuego{
+    animation-delay: 1s;
+}
+#boton-agua{animation-delay: 2s;
+    }
+#boton-tierra{animation-delay: 3s;
+    }
+
+@keyframes float {
+    0% {transform: translateY(0);}
+    50%{transform: translateY(-15px);}
+    100%{transform: translateY(0);}
+    
+}
+.boton-ataque::before {
+    content: "";
+    position: absolute;
+    top:0;
+    width: 90%;
+    height: 100%;
+    filter: blur(5px);
+    background: rgba(255, 255, 255, 0.7);
+    transform: skewX(45deg) translateX(351px);
+    transition: 0.3s;
+    animation: brillo 5s ease-in-out infinite;
+    
+}
+@keyframes brillo{
+    0%{transform: skewX(45deg) translateX(351px);}
+    100%{transform: skewX(45deg) translateX(-150px);}
+}
+.boton-ataque:hover {
+    box-shadow:-10px 10px 30px white,
+                 10px 10px 30px white;
+    transform: scale(1.15);
+}
+
+#mensaje{
+    width: 283px;
+    background-image:url(./assets/papiro.jfif);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 7px 9px 15px black inset;
+    
+}
+#boton-reiniciar {
+    border: none;
+    color:#5BB318;
+    height: 25px;
+    width: 77px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px  #060606;
+    transition: all  2s;
+    
+}
+#boton-avatar:hover {
+    box-shadow: 0px 0px 30px #f6f8f5;
+}
+.ataques-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 142px;
+    color:#f6f8f5;
+    margin-left: -66px;
+    
+}
+.ataques-rival{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 142px;
+    color:#f6f8f5;
+    margin-left: 32px;
+    
+}
+
+.ataques{
+    display: grid;
+    grid-template-columns: 100px 100px
+}
+.boton-fuego{animation-delay: 1s;}
+.boton-agua{animation-delay: 2s;}
+.boton-tierra{animation-delay: 3s;}
+
+/*#rival, #avatar-element{
+    border: solid;
+    border-radius: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: #5BB318;
+    z-index: 1;
+}*/
+.avatar-img{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    animation: float 5s ease-in-out infinite;
+    
+   
+   
+}
+.enemigo-img{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    animation: float 5s ease-in-out infinite;
+    animation-delay: 3s;
+/*margin-left: 52px;*/
+}
+
+#vidas-avatar, #vidas-rival{
+    font-size: x-large;
+   
+    /* box-shadow: 0 0 30px #5bf010;
+    border: none; */
+}
+
+#ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+canvas{
+    border-radius: 20px;
+    outline-offset:-8px;
+    outline:1px solid rgba(255, 255, 255, .5);
+}
+
+canvas image{
+    border-radius: 100%, solid;
+}
+
+#ver-mapa button {
+    width: 80px;
+    height: 41px;
+    border-radius: 20px;
+    background-image: url(./assets/papiro.jfif);
+    border: 2px solid;
+    font-family: 'Cinzel', serif;
+    margin: 10px 0;
+    box-shadow: 7px 9px 15px black inset;
+    transition: all  2s;
+    animation: float 5s ease-in-out infinite;
+   
+}
+  
+
+@keyframes move {
+    from {
+      right: 0;
+    }
+    to {
+      right: calc(50% - 25px);
+    }
+  }
+
+@media (max-width: 560px){
+    .tarjetas, .tarjetas-ataque{
+        flex-direction: column;
+    }    
+}
+@media (max-width: 300px){
+   #ver-mapa div{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+    }    
+}

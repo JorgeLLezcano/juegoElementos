@@ -1,0 +1,49 @@
+ // if (rivalAleatorio ==1) { 
+    //     spanRival.innerHTML ="El quemado🔥"}
+    // else if (rivalAleatorio ==2){ 
+    //     spanRival.innerHTML = "El aguado💧"}
+    // else {spanRival.innerHTML ="El terroso🌵" }
+
+// function ataqueFuego(){
+//     ataqueAvatar="FUEGO"
+    
+//     ataqueAleatorioRival()
+// }
+// function ataqueAgua(){
+    
+//     ataqueAvatar="AGUA"
+//     ataqueAleatorioRival()
+    
+// }
+// function ataqueTierra(){
+    
+//     ataqueAvatar="TIERRA"
+//     ataqueAleatorioRival()
+    
+//}
+//     if(ataqueRival==ataqueAvatar){
+//     crearMensaje("EMPATE")
+// }else if(ataqueAvatar=="FUEGO"&& ataqueRival=="TIERRA"){
+//     crearMensaje("GANASTE")
+//     vidasRival--
+//     spanVidasRival.innerHTML=vidasRival
+// }else if(ataqueAvatar=="AGUA"&& ataqueRival=="FUEGO"){
+//     crearMensaje("GANASTE")
+//     vidasRival--
+//     spanVidasRival.innerHTML = vidasRival
+// }else if(ataqueAvatar=="TIERRA"&& ataqueRival=="AGUA"){
+//     crearMensaje("GANASTE")
+//     vidasRival--
+//     spanVidasRival.innerHTML = vidasRival
+// }else{
+//     crearMensaje("PERDISTE")
+//     vidasAvatar--
+//     spanVidasAvatar.innerHTML = vidasAvatar
+<!-- <button id="boton-fuego"class="boton-ataque"> fuego 🔥</button>
+        <button id="boton-agua"class="boton-ataque"> agua 💧</button>
+        <button id="boton-tierra"class="boton-ataque">tierra 🌵</button> -->
+        (e.target.textContent === "🌵");
+
+        .start {
+            animation: move 2s forwards;
+          }
